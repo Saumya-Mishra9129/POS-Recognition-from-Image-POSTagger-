@@ -22,7 +22,7 @@ Technical Stack-
 ## Running Locally
 
 ```bash
-git clone https://github.com/sibtc/simple-file-upload.git
+git clone https://github.com/Saumya-Mishra9129/POS-Recognition-from-Image-POSTagger-.git
 ```
 Go to the directory where manage.py exists and run the following commands-
 ```bash
