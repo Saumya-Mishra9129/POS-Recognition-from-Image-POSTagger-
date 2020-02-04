@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2 >Upload</h2>
+  <form method="post"  enctype="multipart/form-data">
+    {% csrf_token %}
+    <input  type="file" name="document" class="button button1" >
+    <button type="submit" class="button button2" >Upload file</button>
+  </form>
+  {% if url %}
+    <p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
+
+  {% endif %}
+
+  <div style="text-align: center;">
+  <p class="font-italic text-center">The image uploaded image's POS Tagged file can be seen by giving name of image uploaded above<br> (Take last name from Uploaded file only, remove media).</p>
+  <form action="generate/">
+     {% csrf_token %}
+
+
+  <div>
+    <input id="search" name="search" type="text" class="query-search" placeholder="Search...">
+    <input onclick="setGetParameter()" type="button" class="btn btn-primary" value = "Generate"/>
+</div>
+
+
+<script>
+
+function setGetParameter(){
+    searchWord = document.getElementById('search').value;
+    window.location.href = "{% url 'generate' %}" + "?search="+searchWord;
+}
+</script>
+
+ </form>
+  </div>
+  {% endblock %}

@@ -1,0 +1,92 @@
+
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+  <title>{% block title %}POS Generator{% endblock %}</title>
+
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <!-- use django static tag ton load js file and css file. -->
+    <script src="{% static 'js/app.js' %}"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+.button {
+  background-color:#1d697c;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 14px;
+
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 17px 50px 0 rgba(0,0,0,0.19);
+  margin: 16px 0px;
+}
+
+.button2{
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);
+  margin: 16px 200px;
+}
+.btn {
+  background-color:#388E8E;
+  border: none;
+  color: white;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+
+.btn:hover {
+  background-color:#1d697c ;
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color:#1d697c">
+    <div class="container py-5">
+
+     <!-- <a class="navbar-brand" href="{% url 'home' %}">  <h1>POS Generator  </h1></a>
+      <h6>Upload an image below , automated POS file will be generated</h6>
+--> <header class=" text-center">
+        <h1 class="display-4" style="color:#ffffff">POS Generator</h1>
+        <h6 class="lead mb-0" style="color:#ffffff">Upload an image below!!.</h6>
+
+    </header>
+
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-md-12">
+        <div class="card mb-4">
+          <div class="card-body ">
+            {% block content %}
+            {% endblock %}
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

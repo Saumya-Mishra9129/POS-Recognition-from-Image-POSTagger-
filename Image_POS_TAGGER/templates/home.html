@@ -1,0 +1,15 @@
+
+
+{% block content %}
+
+
+  <div style="text-align: center;">
+  <h2 class="card-title">Welcome to POS Generator</h2>
+  <form action="upload/" >
+     {% csrf_token %}
+  <button class="btn" type="submit"> Go to Page </button>
+  </form>
+  </div>
+
+
+{% endblock %}
